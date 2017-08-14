@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--HighlightTextView-->
+    <declare-styleable name="HighlightTextView">
+        <attr name="span_text" format="string" />
+    </declare-styleable>
+</resources>
