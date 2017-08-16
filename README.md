@@ -31,7 +31,7 @@
 ~~~
 - 代码中设置
 ~~~
-    tv2.addContent("文字内容")
+    highlighttextView.addContent("文字内容")
                 // 设置文字颜色（12：文字颜色转变的开始位置，14：文字颜色转变的结束位置）
                 // 同时提供方法：.addFontColorStyleByKey(@ColorInt int color, String key)
                 .addFontColorStyle(Color.YELLOW, 12, 14)
@@ -42,7 +42,8 @@
                 // 同时提供方法：.addURLStyle(String url, int start, int end)
                 .addURLStyleByKey("http://www.baidu.com", "关键字")
                 // 直接搜索“文字内容”中的所有“关键字”，对所有“关键字”添加点击事件
-                // 同时提供方法：.addClickStyle(final OnHighlightClickListener listener, final boolean isNeedUnderLine, int start,                                               int end   )
+                // 同时提供方法：.addClickStyle(final OnHighlightClickListener listener, final boolean isNeedUnderLine, 
+                int start,int end)
                 .addClickStyleByKey(new HighlightTextView.OnHighlightClickListener() {
                     @Override
                     public void onTextClick(int position, View v) {
@@ -59,7 +60,12 @@
                  // 加删除线
                  // .addStrikethroughStyle(int start, int end)
                  // .addStrikethroughStyleByKey(String key)
+                 // 执行
                  .build();
+                 
+                 
+    // 此方法搜索字符串这种所有的key，并返回每个key的开始位置与结束位置的数组列表（List<int[]> s）             
+    highlighttextView.searchAllIndex(String key)      
 ~~~
 
 ## LICENSE
