@@ -3,9 +3,19 @@
 # 添加依赖
 * 方法1：
 ~~~
-
+  allprojects {
+      repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+      }
+  }
+  
+  dependencies {
+      compile 'com.github.albert-lii:HighlightTextView:1.0.0'
+  }
 ~~~
 * 方法2：
 ~~~
+  compile project(':highlighttextview')
 ~~~
 
