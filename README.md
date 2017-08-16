@@ -64,7 +64,7 @@
                  .build();
                  
                  
-    // 此方法搜索字符串这种所有的key，并返回每个key的开始位置与结束位置的数组列表（List<int[]> s）             
+    // 此方法搜索字符串中所有的key，并返回每个key的开始位置与结束位置的数组列表（return List<int[]> ===> int[0]开始位置，int[1]结束位置）             
     highlighttextView.searchAllIndex(String key)      
 ~~~
 
