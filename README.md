@@ -1,5 +1,5 @@
 # HighlightTextView
-对SpannableStringBuilder进行封装，轻松实现部分文字高亮、点击、图片替换等功能。
+对SpannableStringBuilder进行封装，轻松实现部分文字高亮、点击、添加删除线，更换字体、图片替换等功能。
 
 ## 添加依赖
 - 方法1：
