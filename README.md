@@ -22,7 +22,45 @@
 
 ## 使用方法
 - 布局文件
+~~~
+<com.liyi.highlight.HighlightTextView
+    android:id="@+id/highlighttextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="15sp" />    
+~~~
 - 代码中设置
+~~~
+    tv2.addContent("文字内容")
+                // 设置文字颜色（12：文字颜色转变的开始位置，14：文字颜色转变的结束位置）
+                // 同时提供方法：.addFontColorStyleByKey(@ColorInt int color, String key)
+                .addFontColorStyle(Color.YELLOW, 12, 14)
+                // 设置文字背景色
+                // 同时提供方法：.addBgColorStyleByKey(@ColorInt int color, String key)
+                .addBgColorStyle(Color.BLUE, 0, 10）
+                // 直接搜索“文字内容”中的所有“关键字”，对所有“关键字”添加超链接
+                // 同时提供方法：.addURLStyle(String url, int start, int end)
+                .addURLStyleByKey("http://www.baidu.com", "关键字")
+                // 直接搜索“文字内容”中的所有“关键字”，对所有“关键字”添加点击事件
+                // 同时提供方法：.addClickStyle(final OnHighlightClickListener listener, final boolean isNeedUnderLine, int start,                                               int end   )
+                .addClickStyleByKey(new HighlightTextView.OnHighlightClickListener() {
+                    @Override
+                    public void onTextClick(int position, View v) {
+                        Toast.makeText(MainActivity.this, "关键字", Toast.LENGTH_SHORT).show();
+                    }
+                 }, true, "关键字")// true：是否添加下划线
+                 // 将文字替换为图片（ImageSpan.ALIGN_BOTTOM：图片与文字底部对齐）
+                 // 同时提供方法：.addImageStyle(ImageSpan span, int start, int end)
+                 // drawable也可以是span、bitmap、resouceId
+                 .addImageStyleByKey(drawable, ImageSpan.ALIGN_BOTTOM, "关键字")
+                 // 设置字体样式
+                 // .addTypefaceStyle(int style, int start, int end) 
+                 // .addTypefaceStyleByKey(int style, String key)
+                 // 加删除线
+                 // .addStrikethroughStyle(int start, int end)
+                 // .addStrikethroughStyleByKey(String key)
+                 .build();
+~~~
 
 ## LICENSE
 Copyright 2017 liyi
