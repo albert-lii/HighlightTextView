@@ -1,7 +1,7 @@
 # HighlightTextView
 对SpannableStringBuilder进行封装，轻松实现部分文字高亮、点击、图片替换等功能。
 
-# 添加依赖
+## 添加依赖
 - 方法1：
 ~~~
   allprojects {
@@ -20,11 +20,11 @@
   compile project(':highlighttextview')
 ~~~
 
-# 使用方法
+## 使用方法
 - 布局文件
 - 代码中设置
 
-# LICENSE
+## LICENSE
 Copyright 2017 liyi
 
 Licensed under the Apache License, Version 2.0 (the "License");
