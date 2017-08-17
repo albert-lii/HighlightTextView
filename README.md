@@ -1,6 +1,9 @@
 # HighlightTextView
 对SpannableStringBuilder进行封装，轻松实现部分文字高亮、点击、添加删除线，更换字体、图片替换等功能。
 
+## 演示
+![shot1](https://github.com/albert-lii/HighlightTextView/blob/master/screenshot/demo.gif) 
+
 ## 添加依赖
 - 方法1：
 ~~~
